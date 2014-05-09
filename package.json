@@ -1,8 +1,17 @@
 {
-  "name": "angular-boilerplate",
+  "author": "Victor Soto B.",
+  "name": "ng-boilerplate",
   "version": "1.0.0",
-  "description": "Angular Boilerplate Opinionated",
-  "main": "index.js",
+  "homepage": "http://bit.ly/ng-boilerplate",
+  "licenses": {
+    "type": "MIT",
+    "url": "https://github.com/vsbarba/angular-boilerplate"
+  },
+  "bugs": "https://github.com/vsbarba/angular-boilerplate/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vsbarba/angular-boilerplate"
+  },
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.4",
@@ -14,18 +23,5 @@
     "grunt-conventional-changelog": "~1.1.0",
     "grunt-recess": "~0.6.0",
     "grunt-contrib-less": "~0.11.0"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/vsbarba/angular-boilerplate"
-  },
-  "author": "Victor Soto Barba",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/vsbarba/angular-boilerplate/issues"
-  },
-  "homepage": "https://github.com/vsbarba/angular-boilerplate"
+  }
 }
