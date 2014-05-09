@@ -1,0 +1,190 @@
+
+// Page
+// --------------------------------------------------
+
+
+html,
+body {
+  height:     100%;
+  min-height: 100%;
+  font-weight: @font-weight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Remove all focus outline
+*:focus {
+  outline: 0 none !important;
+}
+
+// Remove underline on all links
+a { text-decoration: none !important; }
+
+body > .cover {
+  background-image: url("/assets/img/cover.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.cover .btn span {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.cover .btn .brand {
+  width: 70px;
+  height: 40px;
+  background-image: url("/assets/img/logo_header.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.navbar .navbar-brand {
+  display: block;
+  width: 70px;
+  height: 0;
+  margin: 0;
+  padding-top: 36px;
+  line-height: 1;
+  overflow: hidden;
+  background-image: url("/assets/img/logo_header.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.navbar-inverse .navbar-nav > li > a:not([data-toggle="devmode"]) {
+  font-family: "Proxbold", @font-family-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: lighten(@navbar-inverse-bg, 2%);
+  }
+}
+
+
+body > [role="main"] {
+  min-height: 100%;
+  height: 100%;
+}
+
+footer {
+  margin-top: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 12px;
+  color: @gray-light;
+  border-top: 1px solid fade(@gray-darker, 36%);
+  background-color: fade(@gray-darker, 35%);
+}
+
+
+.modal-header {
+  border-bottom-color: @gray-darker; 
+}
+
+.modal-footer {
+  border-top-color: @gray-darker;
+}
+
+.thumbblock {
+  clear: both;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 30px;
+}
+
+.addbtn {
+  display: block;
+  min-height: 100px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.addbtn > span {
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #000;
+  border-radius: 2px;
+}
+
+.btn-group-toolbar {
+  position: fixed;
+  top: (@navbar-height + 1);
+  left: 0;
+  display: block;
+  width: 100%;
+  background-color: @navbar-inverse-link-active-bg;
+
+  .btn:first-child,
+  .btn:last-child {
+    border-radius: 0;
+  }
+
+  .btn.active {
+    .box-shadow(none);
+  }
+  
+  .btn.btn-success.active {
+    border-color: transparent;
+    background-color: lighten(@brand-success, 5%);
+  }
+}
+
+.btn-inverse {
+  .button-variant(@gray; @navbar-inverse-link-active-bg; @navbar-inverse-link-active-bg);
+}
+
+.btn-group-toolbar,
+.navbar-inverse {
+  // Custom Dropdown for Navbar
+  .dropdown-menu {
+    .box-shadow(none);
+    border-color: @navbar-inverse-link-active-bg;
+    background-color: lighten(@navbar-inverse-link-active-bg, 1%);
+    border-radius: 0;
+    
+    .divider {
+      background-color: @navbar-inverse-bg;
+      
+      @media (max-width: @screen-xs) {
+        background-color: lighten(@navbar-inverse-bg, 5%);
+      }
+    }
+
+    > li > a {
+      .transition(background-color 150ms ease);
+      padding-left: 10px;
+      padding-right: 10px;
+      font-size: 12px;
+      color: fade(@navbar-inverse-link-color, 75%);
+      background-color: transparent;
+    }
+    
+    > li > a:hover {
+      .transition(background-color 150ms ease);
+      color: @navbar-inverse-link-active-color;
+      background-color: @navbar-inverse-link-hover-bg;
+    }
+  }
+  
+  .form-control {
+    color: @navbar-inverse-link-color;
+    border-color: @navbar-inverse-bg;
+    background-color: lighten(@navbar-inverse-bg, 5%);
+
+    .placeholder(@gray);
+
+    &:focus {
+      .box-shadow(none);
+      border-color: lighten(@navbar-inverse-bg, 10%);
+    }
+  }
+}
+
+[data-type="canvas"] {
+  // margin-top: 120px;
+  min-height: 80%;
+  background-color: #fff;
+}

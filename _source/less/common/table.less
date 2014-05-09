@@ -1,0 +1,39 @@
+
+// Tables
+// --------------------------------------------------
+
+.table {
+
+  // Override default vertical alignment
+  > thead > tr > td,
+  > tfoot > tr > td,
+  > tbody > tr > td {
+    vertical-align: middle;
+  }
+
+  // Add 15px padding to left to match the section's left alignment
+  > thead > tr > td:first-child,
+  > tfoot > tr > td:first-child,
+  > tbody > tr > td:first-child { 
+    padding-left: 15px; 
+  }
+
+  // Add 15px padding to right to match the section's right alignment
+  > thead > tr > td:last-child,
+  > tfoot > tr > td:last-child,
+  > tbody > tr > td:last-child { 
+    padding-right: 15px; 
+  }
+
+  // Override default top-border on the table-row's first child
+  tr:first-child > td {
+    border-top: 0 none;
+  }
+
+  // Override default bottom-border on the table-row's last child
+  tr:last-child > td {
+    border-bottom: 1px solid #ddd;
+  }
+
+
+}

@@ -1,0 +1,29 @@
+{
+  "name": "box-scaffold",
+  "version": "0.0.0",
+  "authors": [
+    "Victor Soto Barba <vsbarba@gmail.com>"
+  ],
+  "description": "Bower Components for box-scaffold setup (Front-End)",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "~1.2.15",
+    "angular-route": "~1.2.15",
+    "bootstrap": "~3.1.1",
+    "jquery": "~2.1.0",
+    "jquery-ui": "~1.10.4",
+    "font-awesome": "~4.0.3",
+    "angular-ui-router": "~0.2.10",
+    "angular-ui-utils": "~0.1.1",
+    "ace": "~1.1.3",
+    "lesshat": "~2.0.15",
+    "angular-ui-ace": "bower"
+  }
+}

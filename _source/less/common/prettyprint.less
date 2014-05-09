@@ -1,0 +1,60 @@
+
+// Prettyprint
+// --------------------------------------------------
+
+.str, 
+.atv { color: #D14; }
+
+.pun, 
+.opn, 
+.clo { color: #93a1a1; }
+
+.kwd, 
+.prettyprint 
+.tag { color: #1e347b; }
+
+.typ, 
+.atn, 
+.dec, 
+.var { color: teal; }
+
+.lit { color: #195f91; }
+.fun { color: #dc322f; }
+.pln { color: #48484c; }
+.com { 
+  font-style: italic;
+  color: #93a1a1; 
+}
+
+
+// Prettyprint Styles
+.prettyprint {
+  margin-bottom:      40px;
+  padding:            10px;
+  font-size:          12px;
+  background-color:   #fefefe;
+  border:             1px solid #e0e0e0;
+}
+
+// Pretty Print with Line Numbers shadow
+.prettyprint.linenums { 
+  .box-shadow(inset 45px 0 0 #fafafa);
+}
+
+
+.prettyprint ol.linenums { 
+  margin:         0;
+  margin-left:  -5px; 
+}
+
+.prettyprint ol.linenums > li {
+  padding-left:     12px;
+  color:            #bebec5;
+  line-height:      1.6;
+}
+
+// Line Numbers IE Specific: IE indents via margin-left
+.lt-ie9 .prettyprint ol.linenums { 
+  margin:       0;
+  margin-left:  33px; 
+}

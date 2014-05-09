@@ -1,0 +1,12 @@
+# See : http://stackoverflow.com/questions/17444072/angularjs-cant-get-html5-mode-urls-with-ui-route-state
+# RewriteEngine for AngularJS HTML5 Mode provided by locationProvider
+
+RewriteEngine on
+
+# Don't rewrite files or directories
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Rewrite everything else to index.html to allow html5 state links
+RewriteRule ^ index.html [L]

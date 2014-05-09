@@ -1,0 +1,33 @@
+
+// Jumbotron
+// --------------------------------------------------
+
+.jumbotron {
+  position: relative;
+  min-height: 340px;
+  padding-top: @navbar-height + 50;
+
+  @media (max-width: @screen-xs) {
+    min-height: auto;
+    padding-top: @navbar-height + 20;
+  }
+}
+
+// Removes jumbotron's bottom-margin
+.jumbotron-hero { margin-bottom: 0; }
+
+// Jumbotron Nav
+.jumbotron-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  background-color: fade(#fff, 70%);
+
+  .btn {
+    .border-top-radius(0);
+    .border-bottom-radius(0);
+     padding: 10px 15px;
+  }
+}

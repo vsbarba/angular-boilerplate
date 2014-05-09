@@ -1,0 +1,58 @@
+<div class="brand">
+  <h1>
+    <a href="/" title="User Interface Kit">
+      UI*Kit.
+    </a>
+  </h1>
+</div>
+
+<div class="btn-group-vertical btn-group-sm">
+  <a ui-sref="dashboard" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Dashboard">
+    <i class="fa fa-home fa-2x"></i>
+  </a>
+</div>
+
+<div class="btn-group-vertical btn-group-sm">
+  <button ng-click="update(json)" ng-disabled="parentForm.widgetInfo.$invalid" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Save">
+    <i class="fa fa-file-o fa-2x"></i>
+  </button>
+  <button ng-click="update(json)" ng-disabled="parentForm.widgetInfo.$invalid" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Save">
+    <i class="fa fa-floppy-o fa-2x"></i>
+  </button>
+</div>
+
+<div class="btn-group-vertical btn-group-sm">
+  <button show-console data-editor-field="#groovy" data-console="#console" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Show Console">
+    <i class="fa fa-terminal fa-2x"></i>
+  </button>
+
+  <button ng-click="refreshIframe()" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Run">
+    <i class="fa fa-play-circle fa-2x"></i>
+  </button>
+</div>
+
+<div class="btn-group-vertical btn-group-vertical-last btn-group-sm">
+  <button uibtn-Fullscreen type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Fullscreen">
+    <i class="glyphicon glyphicon-resize-full fa-2x"></i>
+  </button>
+</div>
+
+<!-- Help Section -->
+<div class="btn-help btn-group-vertical pull-down btn-group-sm">
+  <button class="btn btn-default btn-orange">
+    <i class="fa fa-question-circle fa-2x"></i>
+  </button>
+  <!-- Side Menu -->
+  <div class="popup-side-menu">
+    <div class="tick"></div>
+    <a href="//dev.help.sandbox.toro.io" target="_blank" data-dest="Help Center" class="link kbase">
+      <i class="fa fa-book fa-2x"></i> How to use?
+    </a>
+    <a href="//dev.help.sandbox.toro.io/faqs" class="link kbase">
+      <i class="fa fa-question-circle fa-2x"></i> FAQS
+    </a>
+    <a data-toggle="modal" data-target="#myModal" class="link kbase">
+      <i class="fa fa-keyboard-o fa-2x"></i> Keyboard Shortcuts
+    </a>
+  </div>
+</div>

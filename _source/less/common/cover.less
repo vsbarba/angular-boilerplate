@@ -1,0 +1,146 @@
+
+// Template: Cover
+// --------------------------------------------------
+
+.cover {
+  color: @black;
+  text-align: center;
+
+  // Links
+  a,
+  a:focus,
+  a:hover {
+    color: @brand-primary;
+  }
+
+  // Custom Default Button
+  .btn-default,
+  .btn-default:hover,
+  .btn-default:focus {
+    color: #fff;
+    text-shadow: none; /* Prevent inheritence from `body` */
+    background-color: @black;
+    border: 1px solid #fff;
+  }
+}
+
+.cover.site-wrapper {
+  // Extra markup and styles for table-esque vertical and horizontal centering
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  background-color: @gray-lighter;
+  // background-image: url("@{relativepath}/img/cover.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  .site-wrapper-inner {
+    display: table-cell;
+    vertical-align: top;
+  }
+
+  .cover-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cover-heading {
+    font-family: @font-heading, @font-family-base;
+    font-size: 64px;
+    text-transform: uppercase;
+    text-shadow: 0 2px 3px #fff;
+  }
+
+  // Padding for Spacing
+  .inner {
+    padding: 30px;
+  }
+
+  // Header
+  .masthead-brand {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .masthead-nav > li {
+    display: inline-block;
+  }
+  .masthead-nav > li + li {
+    margin-left: 20px;
+  }
+  .masthead-nav > li > a {
+    padding-left: 0;
+    padding-right: 0;
+    color: @black; /* IE8 proofing */
+    // color: rgba(255,255,255,.75);
+    border-bottom: 2px solid transparent;
+  }
+  .masthead-nav > li > a:hover,
+  .masthead-nav > li > a:focus {
+    background-color: transparent;
+    border-bottom-color: rgba(255,255,255,.25);
+  }
+  .masthead-nav > .active > a,
+  .masthead-nav > .active > a:hover,
+  .masthead-nav > .active > a:focus {
+    color: #fff;
+    border-bottom-color: #fff;
+  }
+
+  @media (min-width: 768px) {
+    .masthead-brand {
+      float: left;
+    }
+    .masthead-nav {
+      float: right;
+    }
+  }  
+
+
+  // Cover
+  .cover {
+    padding: 0 20px;
+  }
+  .cover .btn-lg {
+    padding: 10px 20px;
+  }
+
+  // Footer
+  .mastfoot {
+    color: #999; /* IE8 proofing */
+    color: rgba(255,255,255,.5);
+  }
+
+  // Affix and Center
+  @media (min-width: @screen-sm) {
+    /* Pull out the header and footer */
+    .masthead {
+      position: fixed;
+      top: 0;
+    }
+    .mastfoot {
+      position: fixed;
+      bottom: 0;
+    }
+    /* Start the vertical centering */
+    .site-wrapper-inner {
+      vertical-align: middle;
+    }
+    /* Handle the widths */
+    .masthead,
+    .mastfoot,
+    .cover-container {
+      width: 100%; /* Must be percentage or pixels for horizontal alignment */
+    }
+  }
+
+  @media (min-width: @screen-lg) {
+    .masthead,
+    .mastfoot,
+    .cover-container {
+      width: 700px;
+    }
+  }
+}

@@ -1,0 +1,119 @@
+<!-- gEditrMain -->
+<div class="gEditrMain hud">
+
+  <!-- Toolbar -->
+	<div ui-view="toolbar" class="pn6bldr btn-group-toolbar btn-group-sm btn-group-vertical">
+	</div>
+
+  <nav class="navbar navbar-default" data-navbar="sticky" role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbardefault">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a class="navbar-brand" href="/pages/">
+        <span class="glyphicon glyphicon-plus-sign text-primary"></span> &nbsp; Widget Sandbox.
+      </a>
+    </div>
+
+
+    <div class="collapse navbar-collapse" id="navbardefault">
+      <!-- View for larger screens -->
+      <div class="navbar-div col-sm-6 col-lg-3 pull-right hidden-xs">
+        <div class="media">
+          <a href="#" class="pull-right">
+            <img src="http://placehold.it/45x45" alt="">
+          </a>
+          <div class="media-content text-right">
+            Welcome back, <a href="#">David Brown</a>
+            <small class="help-block">
+              Superuser
+            </small>
+          </div>
+        </div>
+      </div>
+
+      <!-- View for Smaller Screens -->
+      <div class="navbar-div col-lg-3 pull-right visible-xs">
+        <div class="media">
+          <a href="#" class="pull-left">
+            <img src="http://placehold.it/45x45" alt="">
+          </a>
+          <div class="media-content">
+            Welcome back, <a href="#">David Brown</a>
+            <small class="help-block">
+              Superuser
+            </small>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- sbTabWrap -->
+  <div class="sbTabWrap clearfix">
+    <div show-hide="" data-tab-trigger=".tab-btn" data-hide-class=".box" data-target="#box-velocity" class="tab-btn active">script.groovy</div>
+  </div>
+
+  <div class="ace-wrapper-editor">
+    <!-- Editor -->
+    <div
+    id="groovy" class="ace-theme-monokai ace-directive"
+    ui-ace="{
+    useWrapMode : true,
+    showGutter: true,
+    theme:'monokai',
+    mode: 'groovy',
+    showPrintMargin: false,
+    onLoad: aceLoaded,
+    onChange: aceChanged
+    }">
+class test {
+
+  public void blah() {
+  println 'in method'
+
+  def array = [1,2,3,4,5]
+
+  array.each() {
+      println "element : ${it}"
+  }
+
+  }
+
+  public static void main(String[] args){
+     println 'daren was here'
+     new test().blah()
+  }
+
+ }</div>
+
+    <!-- Console -->
+    <div
+    id="console" class="ace-theme-monokai ace-directive">
+    <div class="tab-btn active tab">Console</div>
+<pre>
+daren was here
+in method
+element : 1
+element : 2
+element : 3
+element : 4
+element : 5
+</pre>
+    </div>
+  </div>
+
+  <!-- Panel -->
+  <div ui-view="panel"></div>
+
+  <!-- Modal Keyboard Shortcut -->
+  <div ui-view="keyboardShortcut"></div>
+
+</div>
+
+

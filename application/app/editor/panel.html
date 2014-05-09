@@ -1,0 +1,66 @@
+  <div id="pn6bldr-panel" class="pn6bldr panel-group panel-group-right panel-group-main-parent ng-scope">
+    <div pn6panel-hide data-extra-target=".ace-wrapper-editor" data-target-class=".pn6bldr.panel-group-right" data-class-toggle="inactive" class="collapse-button">
+        <i class="fa fa-gears"></i>
+    </div>
+    <!--
+      * Page Info
+     -->
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <button class="btn btn-block btn-link" data-toggle="collapse" data-parent="#pn6bldr-panel" data-target="#collapseZero">
+          <i class="fa fa-circle"></i> &nbsp;Information
+        </button>
+      </div>
+      <div id="collapseZero" class="panel-collapse collapse in">
+        <div class="panel-body">
+          <!-- content -->
+          <form name="widgetInfo" novalidate>
+            <div class="form-group clearfix">
+              <small class="help-block">Default Label</small>
+              <input type="text" ng-model="json.default" required class="form-control input-sm" name="default">
+              <small ng-show="!widgetInfo.default.$valid" class="help-block help-warning">
+                <i class="fa fa-warning"></i> Default label is a required field.
+              </small>
+            </div>
+            <div class="form-group clearfix">
+              <small class="help-block">Name</small>
+              <input type="text" ng-model="json.name" required valid-variable class="form-control input-sm" name="name">
+              <small ng-show="widgetInfo.name.$invalid" class="help-block help-warning">
+                <i class="fa fa-warning"></i> GroovyScript name should not contain whitespaces and should start with a letter [Aa-Zz]. Best practice is to use camelCase.
+              </small>
+            </div>
+            <div class="form-group clearfix">
+              <small class="help-block">Version</small>
+              <input type="text" ng-model="json.version" required class="form-control input-sm" name="version">
+              <small ng-show="!widgetInfo.version.$valid" class="help-block help-warning">
+                <i class="fa fa-warning"></i> Version is a required field.
+              </small>
+            </div>
+            <div class="form-group clearfix">
+              <small class="help-block">Icon Url</small>
+              <input type="text" ng-model="json.iconUrl" required valid-url class="form-control input-sm" name="iconUrl">
+              <small ng-show="!widgetInfo.iconUrl.$valid" class="help-block help-warning">
+                <i class="fa fa-warning"></i> Icon url should be a valid url.
+              </small>
+            </div>
+            <div class="form-group clearfix">
+              <small class="help-block">Help Url</small>
+              <input type="text" ng-model="json.helpUrl" required valid-url class="form-control input-sm" name="helpUrl">
+              <small ng-show="!widgetInfo.helpUrl.$valid" class="help-block help-warning">
+                <i class="fa fa-warning"></i> Help url should be a valid url.
+              </small>
+            </div>
+            <div class="form-group clearfix">
+              <small class="help-block">Description</small>
+              <textarea ng-model="json.description" class="form-control input-sm" name="description" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+              <button ng-click="update(json)" ng-disabled="widgetInfo.$invalid" class="btn btn-xs btn-success pull-right">Update Widget</button>
+            </div>
+          </form>
+          <!-- End content -->
+        </div>
+      </div>
+    </div><!-- end of .panel-default -->
+
+  </div>

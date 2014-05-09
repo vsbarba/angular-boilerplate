@@ -1,0 +1,62 @@
+
+// Template: Login Screen
+// --------------------------------------------------
+
+.login {
+  height: 100%;
+  background-color: @white;
+}
+
+.login .container-fluid > .row {
+  margin-left: 0;
+  margin-right: 0;
+
+  &.login-heading {
+    margin-top: 50px;
+
+    @media (max-width: @screen-xs) { margin-bottom: 20px; }
+  }
+}
+
+.container-login {
+  position: relative;
+  min-height: 300px;
+  padding-top: 10px;
+
+  &:first-child {
+    border-left: 1px solid #fff;
+    padding-left: 25px;
+    @media (max-width: @screen-sm) {
+      padding-left: 25px;
+      border: 0 none; 
+    }    
+  }
+
+  &:last-child {
+    padding-top: 15px;
+    padding-right: 25px;
+    border-right: 1px solid @gray-lighter;
+
+    @media (max-width: @screen-sm) {
+      padding-right: 15px;
+    }    
+  }
+}
+
+.login .img-circle {
+  width: 100%;
+  height: auto;
+}
+
+.login .login-logo {
+  display: block;
+  width: 175px;
+  height: 0;
+  margin: 25px auto;
+  padding: 175px 0 0 0;
+  overflow: hidden;
+  background-image: url("@{relativepath}/img/@{login-logo}");
+  background-position: center center;
+  background-size: auto;
+  background-repeat: no-repeat;  
+}

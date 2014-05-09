@@ -1,0 +1,64 @@
+
+// Navs
+// --------------------------------------------------
+
+// Navbar Sorting w/ Search
+.nav.nav-sort {
+  padding-left: 15px;
+  padding-right: 15px;
+  border-bottom: 1px solid @gray-lighter;
+
+  @media (max-width: @screen-xs) { 
+    padding-left: 0;
+    padding-right: 0;
+    border-bottom: 0 none;
+  }
+
+  > li { 
+    display: inline-block;
+    
+    @media (max-width: @screen-xs) {
+      display: block;
+      border-bottom: 1px solid @gray-lighter;
+    }
+  }
+
+  > li > a {
+   .transition(border-color 100ms ease);
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 16px;
+    border-bottom: 4px solid transparent;
+    background-color: transparent;
+  }
+
+  > li.active > a,
+  > li > a:hover,
+  > li.open > a { 
+   .transition(border-color 100ms ease);
+    border-bottom: 4px solid @brand-primary;
+  }
+}
+
+.nav.nav-panel {
+ .border-top-radius(@border-radius-base);
+ .border-bottom-radius(@border-radius-base);
+  margin-top: 25px;
+  background-color: #f4f4f4;
+  border: 1px solid @gray-lighter;
+
+  > li:first-child > a { border-top: 0 none; }
+  > li:last-child > a { border-bottom: 0 none; }
+
+  > li > a {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #fafafa;
+  }
+
+  .nav { display: none; }
+
+  .nav > li > a {
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+}
