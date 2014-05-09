@@ -1,43 +1,44 @@
-TORO.IO - Widget Sandbox
-========================
+Angular Boilerplate
+===============================================================================
 
-This is the updated Widget Sandbox that uses the new directory structure for AngularJS Projects.
+This is my opinionated angular boilerplate. This project is based on
+[ng-bp](https://github.com/ngbp/ngbp) made by their awesome team.
 
-This includes Gruntfile for watching/building 'Less' stylesheets and optimising images.
-This project also uses UIKit to match TORO Commerce branding.
+Angular Boilerplate is powered by Grunt.js, Bower, Node.js, LESS. This angular
+project also uses [angular ui-router](https://github.com/angular-ui/ui-router).
 
-[Download TORO.IO - Widget Sandbox](https://bitbucket.org/torodev/toro.io-widget-sandbox/get/5ce25baa12e7.zip)
+[Download TORO.IO - Widget Sandbox](https://github.com/vsbarba/angular-boilerplate/archive/master.zipp)
 
 How to Use
 ==========
 
 ### Prerequisite
 
-Before proceeding, [Node JS](http://nodejs.org) installed otherwise non of the stuff here will 
+Before proceeding, [Node JS](http://nodejs.org) installed otherwise non of the stuff here will
 actually work.
 
-You may install NodeJS by [downloading](http://nodejs.org/dist/v0.10.25/node-v0.10.25.pkg) 
+You may install NodeJS by [downloading](http://nodejs.org/dist/v0.10.25/node-v0.10.25.pkg)
 via [NodeJS.org](http://nodejs.org/) or via Homebrew:
 
-`$ brew install node`  
+`$ brew install node`
 
 ### Usage
 
-Once downloaded, you may have to chage these files to match your project and 
+Once downloaded, you may have to chage these files to match your project and
 the dependencies to run or develop your app with.
 
-`bower.json`   
+`bower.json`
 this is used to download front-end packages such as Bootstrap, jQuery &amp; Fontawesome
 with the latest-stable build fresh off their repositories.
 
-`package.json`   
+`package.json`
 this is used to download `devDependencies` that `Gruntfile.js` uses to build your
 application.
 
 ### Directory Structure
 
-Jekyll Barebones uses TORO Commerce UIKit so you can dive in to coding immediately, 
-basic Bootstrap features are added initially but extended features such as 
+Jekyll Barebones uses TORO Commerce UIKit so you can dive in to coding immediately,
+basic Bootstrap features are added initially but extended features such as
 Charts and other stuff **needs** to be added by you manually.
 
 ``` shell
@@ -49,7 +50,7 @@ jekyll-barebone   # root directory
 │   ├── _source
 │   ├── assets
 │   │   ├── css
-│   │   ├── fonts 
+│   │   ├── fonts
 |   │   ├── img
 |   |   └── js
 |   ├── index.html
@@ -104,7 +105,7 @@ less stylesheets to css, outputs go to `application/assets/css`.
 
 **imagemin**
 
-optimises image files `*.{gif,jpg,png}` and compresses 
+optimises image files `*.{gif,jpg,png}` and compresses
 these up to 20% less of the the original file size.
 
 `$ grunt buildimg`
